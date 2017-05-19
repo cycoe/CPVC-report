@@ -45,7 +45,7 @@
 \setmainfont{Times New Roman}
 \setsansfont{Arial}
 \setmonofont{Noto Mono}
-\setCJKmainfont[BoldFont=SimHei]{STSong}
+\setCJKmainfont[BoldFont=SimHei]{STZhongsong}
 
 %\newcommand{\song}{\CJKfamily{simsun}}  % 宋体
 \newcommand{\hei}{\CJKfamily{SimHei}}   % 黑体
