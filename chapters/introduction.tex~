@@ -166,7 +166,7 @@ CPVC 树脂在塑料管材（冷热水管、化工管、电力电缆护套、喷
 在反应 \eqref{eqCPVCDegrade4} 之后，又会连续地发生反应 \eqref{eqCPVCDegrade3} 和反应 \eqref{eqCPVCDegrade2}。分解生成的大分子自由基也会发生链的转移，终止等反应形成支化、交联和不饱和双键结构。
 
 \subsection{CPVC 不稳定氯原子的测定}
-不稳定氯原子是引起 CPVC 热分解的主要原因。目前，测定不稳定氯原子含量的唯一有效的方法是酚烷基化法\cite{16}。烯丙基氯与叔碳氯较一般的氯原子有较大的反应活性，它们均可与苯酚发生取代反应，如图 \ref{phenol}：
+不稳定氯原子是降低 CPVC 热稳定性的主要原因。目前，不稳定氯原子含量的唯一有效的测定方法是酚烷基化法\cite{16}。烯丙基氯与叔氯较一般的氯原子有较大的反应活性，它们均可与苯酚发生取代反应，如图 \ref{phenol}：
 
 \begin{figure}[!htb]
     \begin{center}
@@ -182,15 +182,16 @@ CPVC 树脂在塑料管材（冷热水管、化工管、电力电缆护套、喷
         \chemfig{\va{C}-[,1.5,,,decorate,decoration=snake]C(-[2]H)(-[6]{Cl})-CH_2-C([2]-*6(=-=(-[2]{OH})-=-))(-[6]{CH_2(-[6]CHCl([6]-[,1.5,,,decorate,decoration=snake]))})-CH_2-C(-[2]H)(-[6]{Cl})-[,1.5,,,decorate,decoration=snake]}
         \schemestop
     \end{center}
-    \caption{利用 A. A. Caraculacu 酚烷基化法测定 CPVC 样品中不稳定氯原子含量的方法}
+    \caption{不稳定氯原子与苯酚反应方程式}
     \label{phenol}
 \end{figure}
+
 
 \section{CPVC 的结构与合成工艺}
 
 \subsection{CPVC 分子结构}
 \setatomsep{1.5em}
-CPVC 是 PVC 与 \chemfig{Cl_2} 在热及引发剂等作用下反应生成的产物。研究表明，在氯化反应中，氯原子优先进攻 PVC 分子链中的 \chemfig{\va{C}-CH_2-} 基团，而不是 \chemfig{\va{C}-CHCl-} 基团，因此得到的 CPVC 主要是 \chemfig{\va{C}-[@{op,.75}]CHCl-CHCl-[@{cl,.25}]} \makebraces[3pt,3pt]{}{op}{cl} 链节构成。当 CPVC 的 $\omega_{Cl}$ 低于 63\% 时，生成的结构大部分为 \chemfig{\va{C}-[@{op,.75}]CHCl-CHCl-[@{cl,.25}]} \makebraces[3pt,3pt]{}{op}{cl}，该结构具有一定的偶极矩，使得分子间范德华力增强；当 $\omega_{Cl}$ 高于 63\% 时，才逐渐生成极性较小的 \chemfig{\va{C}-[@{op,.75}]CCl_2-CH_2-[@{cl,.25}]} \makebraces[3pt,3pt]{}{op}{cl} 结构。由此可见，PVC 的氯化反应主要发生在亚甲基碳原子上，生成 \chemfig{\va{C}-[@{op,.75}]CHCl-CHCl-[@{cl,.25}]} \makebraces[3pt,3pt]{}{op}{cl} 链节；其次再发生在次甲基碳原子上，生成 \chemfig{\va{C}-[@{op,.75}]CCl_2-CH_2-[@{cl,.25}]} \makebraces[3pt,3pt]{}{op}{cl} 链节。随着氯化程度的提高，\chemfig{\va{C}-[@{op,.75}]CCl_2-CH_2-[@{cl,.25}]} \makebraces[3pt,3pt]{}{op}{cl} 与 \chemfig{\va{C}-[@{op,.75}]CHCl-CHCl-[@{cl,.25}]} \makebraces[3pt,3pt]{}{op}{cl} 链节含量的比值增大。最终 CPVC 的 $\omega_{Cl}$ 由通氯量决定，其性能主要取决于氯化工艺。
+CPVC 是 PVC 与 \chemfig{Cl_2} 在热及引发剂等作用下反应生成的产物。研究表明，在氯化反应中，氯原子优先进攻 PVC 分子链中的 \chemfig{\va{C}-CH_2-} 基团，而不是 \chemfig{\va{C}-CHCl-} 基团，因此得到的 CPVC 主要是 \chemfig{\va{C}-[@{op,.75}]CHCl-CHCl-[@{cl,.25}]} \makebraces[3pt,3pt]{}{op}{cl} 链节构成。当 CPVC 的 $\omega_{Cl}$ 低于 63\% 时，生成的大部分为 \chemfig{\va{C}-[@{op,.75}]CHCl-CHCl-[@{cl,.25}]} \makebraces[3pt,3pt]{}{op}{cl} 结构，具有一定的偶极矩，使得分子间范德华力增强；当 $\omega_{Cl}$ 高于 63\% 时，才逐渐生成极性较小的 \chemfig{\va{C}-[@{op,.75}]CCl_2-CH_2-[@{cl,.25}]} \makebraces[3pt,3pt]{}{op}{cl} 结构。由此可见，PVC 的氯化反应主要发生在亚甲基碳原子上，生成 \chemfig{\va{C}-[@{op,.75}]CHCl-CHCl-[@{cl,.25}]} \makebraces[3pt,3pt]{}{op}{cl} 链节；其次再发生在次甲基碳原子上，生成 \chemfig{\va{C}-[@{op,.75}]CCl_2-CH_2-[@{cl,.25}]} \makebraces[3pt,3pt]{}{op}{cl} 链节。随着氯化程度的提高，\chemfig{\va{C}-[@{op,.75}]CCl_2-CH_2-[@{cl,.25}]} \makebraces[3pt,3pt]{}{op}{cl} 与 \chemfig{\va{C}-[@{op,.75}]CHCl-CHCl-[@{cl,.25}]} \makebraces[3pt,3pt]{}{op}{cl} 链节含量的比值增大。最终 CPVC 的 $\omega_{Cl}$ 由通氯量决定，其性能主要取决于氯化工艺。
     
 \subsection{氯在 CPVC 中的分布}
 CPVC 的结构单元主要包括 3 种基本结构（见图\ref{fig1}）。其中各种结构单元在分子链中的含量与分布情况会在很大程度上影响分子链的断裂速率和方式，从而对 CPVC 的热稳定性以及加工性能产生很大的影响。因此，测定 CPVC 中的 $\omega_{Cl}$ 及在分子链中的分布情况是非常重要的。
