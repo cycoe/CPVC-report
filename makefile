@@ -9,6 +9,11 @@ CPVC.pdf: CPVC.tex biblio.bib $(plots)
 $(plots): plot.gnu $(origins)
 	gnuplot plot.gnu
 
+upload:
+	git add .
+	git commit -m "update"
+	git push
+
 clean:
 	rm $(plots)
 	rm *.aux *.blg *.bbl *.fdb_latexmk *.fls *.idx *.ilg *.ind *.log *.nav *.out *.snm *.synctex.gz *.toc *.xdv
