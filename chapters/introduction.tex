@@ -218,44 +218,40 @@ CPVC 的结构单元主要包括 3 种基本结构（见图\ref{fig1}）。其�
 实验室中主要采用气固相光催化法氯化 PVC 制备 CPVC，此反应为自由基反应，反应过程分为链引发、链传递、链终止三个步骤\cite{1}，反应机理如下：\par
 
 链引发反应：
-    \begin{center}
+    \begin{equation}
         \schemestart
             \chemfig{Cl_2}
             \arrow(.mid east--.mid west)
             2\lewis{0.,Cl}
         \schemestop
-    \end{center}
+    \end{equation}
 
 链传递反应：
-    \begin{center}
+    \begin{equation}
         \schemestart
             \lewis{0.,Cl}
             \+
-            \chemfig{\va{C}-[@{op,.75}]CH(-[2]{Cl})-CH(-[2]H)-[@{cl,.25}]}
-            \makebraces[5pt,5pt]{}{op}{cl}
+            \chemfig{\va{C}-[,1.5,,,decorate,decoration=snake]C([2]-Cl)([6]-H)-C([2]-H)([6]-H)-[,1.5,,,decorate,decoration=snake]}
             \arrow(.mid east--.mid west)
-            \chemfig{\va{C}-[@{op,.75}]CH(-[2]{Cl})-CH(-[2]{Cl})-[@{cl,.25}]}
-            \makebraces[5pt,5pt]{}{op}{cl}
+            \chemfig{\va{C}-[,1.5,,,decorate,decoration=snake]C([2]-Cl)([6]-H)-C([2]-Cl)([6]-H)-[,1.5,,,decorate,decoration=snake]}
             \+
             \lewis{0.,H}
         \schemestop
-    \end{center}
+    \end{equation}
 
-    \begin{center}
+    \begin{equation}
         \schemestart
             \lewis{0.,Cl}
             \+
-            \chemfig{\va{C}-[@{op,.75}]CH(-[2]{Cl})-CCl(-[2]H)-[@{cl,.25}]}
-            \makebraces[5pt,5pt]{}{op}{cl}
+            \chemfig{\va{C}-[,1.5,,,decorate,decoration=snake]C([2]-Cl)([6]-H)-C([2]-H)([6]-Cl)-[,1.5,,,decorate,decoration=snake]}
             \arrow(.mid east--.mid west)
-            \chemfig{\va{C}-[@{op,.75}]CH(-[2]{Cl})-CCl(-[2]{Cl})-[@{cl,.25}]}
-            \makebraces[5pt,5pt]{}{op}{cl}
+            \chemfig{\va{C}-[,1.5,,,decorate,decoration=snake]C([2]-Cl)([6]-H)-C([2]-Cl)([6]-Cl)-[,1.5,,,decorate,decoration=snake]}
             \+
             \lewis{0.,H}
         \schemestop
-    \end{center}
+    \end{equation}
     
-    \begin{center}
+    \begin{equation}
         \schemestart
             \lewis{0.,H}
             \+
@@ -265,23 +261,29 @@ CPVC 的结构单元主要包括 3 种基本结构（见图\ref{fig1}）。其�
             \+
             \lewis{0.,Cl}
         \schemestop
-    \end{center}
+    \end{equation}
 
 链终止反应：
-    \begin{center}
+    \begin{equation}
         \schemestart
             2\lewis{0.,Cl}
             \arrow(.mid east--.mid west)
             \chemfig{Cl_2}
         \schemestop
-    \end{center}
+    \end{equation}
 
 常见的引发方式主要有单纯热引发、紫外光引发及低温等离子体引发。单纯热引发方式即单纯依靠加热使 PVC 分子产生自由基从而制备 CPVC，所得产品的 $\omega_{Cl}$ 较低，反应过程中物料极易发黏变黄从而影响氯化反应的进行；低温等离子体引发 PVC 氯化虽然能得到氯化均匀且具有较高 $\omega_{Cl}$ 的 CPVC，但是该引发方式制备 CPVC 较难实现工业化；采用紫外光引发方式能够得到氯化均匀且具有较高 $\omega_{Cl}$ 的 CPVC，若能解决工程问题，有望实现工业化，以期解决目前 CPVC 生产工艺中存在的环境污染、产品后处理繁琐等弊端。
 
 \subsection{CPVC 合成方法}
-目前，CPVC 树脂的生产工艺按氯化介质不同分为溶剂法、水相悬浮法和气固相法。溶剂法由于其使用有机溶剂、能耗较高，目前几乎被淘汰。水相悬浮法具有操作简单、产品性能较好等优点，是目前国内外 CPVC 生产所采用的主要方法。但该法流程较长，生产“三废”较多，成本相对较高。用气固相搅拌式氯化法生产 CPVC，流程简单、污染物排放小，但传热效果较差，不适宜大规模生产。
+目前，CPVC 树脂的生产工艺按氯化介质不同分为溶剂法、水相悬浮法和气固相法。用气固相搅拌式氯化法生产 CPVC，流程简单、污染物排放小，但传热效果较差，不适宜大规模生产。
 
-\subsubsection{气固相法制备 CPVC}
+\subsubsection{溶液法}
+溶液法是 CPVC 生产最早采用的方法，工艺比较成熟。它是将疏松型 PVC 树脂用适当的溶剂进行处理，然后在 80$\sim$100\cd 下加入偶氮二乙腈，通入氯气发生氯化反应生成 CPVC 树脂。在溶液中加入沉淀剂甲醇可使 CPVC 沉淀，抽滤后酸洗、干燥得氯含量为 64\%$\sim$75\% 的白色 CPVC 粉末产品。该方法制得的 CPVC 产品氯分布均匀，具有良好的溶解性能，易溶于 THF、二氯乙烷、氯苯等有机溶剂，适合用做涂料和黏合剂等。但由于为无规均质产品，其热稳定性、耐热性和机械性能较差，不能用于管材等硬质制品。溶剂法由于其使用四氯化碳、氯己烷等有机溶剂，毒性大、污染严重、溶剂回收复杂，并且能耗较高，目前几乎被淘汰。
+
+\subsubsection{水相悬浮法}
+水相悬浮法是以水或盐酸水溶液为介质，在搅拌作用下使 PVC 树脂悬浮于反应体系中。通入氮气充分除氧后，向反应体系中加入所需催化剂。缓慢向体系中通入氯气使反应开始进行，体系温度和压力上升。随着反应的进行，体系压力下降，至压力恒定时反应结束。泄压，在氮气保护下进行两次过滤、洗涤操作，滤饼进入稳定化工序\cite{23}。该法制得的非均质 CPVC 含氯量高、氯化均匀、热稳定性好。水相悬浮法具有操作简单、产品性能较好等优点，是目前国内外 CPVC 生产所采用的主要方法。但由于流程较长，生产“三废”较多，成本相对较高。
+
+\subsubsection{气固相法}
 由张向京等\cite{1}报导的由气固相法制备 CPVC 的方法如下：
 
 \begin{enumerate}[(1) ]
@@ -303,18 +305,22 @@ CPVC 的结构单元主要包括 3 种基本结构（见图\ref{fig1}）。其�
 \subsection{润滑剂}
 
 
-\section{CPVC 树脂的应用}
-CPVC 具有卓越的耐高温、抗腐蚀和阻燃性能，因此其市场应用状况良好。自 1960 年开始，CPVC 管材在美国开始应用，目前在北美已被普遍使用。其市场占有率由 1995 年的 20\% 增加至 2000 年的 30\%，2000 年的总销售量比 1984 年高 3 倍。\par
-近 20 年来，我国的 CPVC 管材也高速发展，CPVC 树脂已成为除普通 PVC 树脂外用量最大的含氯树脂品种。下面介绍几种 CPVC 树脂在国内的应用情况。
+\section{CPVC 树脂的应用\cite{5}}
+CPVC 具有卓越的耐高温、抗腐蚀和阻燃性能，而且与其他热塑性塑料相比，CPVC 成本更低。因此其被广泛应用于制造各种管材、板材、型材、片材、泡沫材料、防腐涂料等产品。自 20 世纪 60 年代开始，CPVC 管材开始在美国应用，目前在北美已被普遍使用。其市场占有率由 1995 年的 20\% 提高至 2000 年的 30\%，2000 年的总销售量比 1984 年高 3 倍。\par
+近 20 年来，我国的 CPVC 树脂也高速发展，其已成为除普通 PVC 树脂外用量最大的含氯树脂品种。目前主要应用领域包括如下 6 个方面。
 
-\subsection{CPVC 冷热水管}
-CPVC 管材广泛应用于家庭、办公室、医院、学校等楼房的采暖供热水管，甚至用作太阳能供水管和温泉供水管。使用 CPVC 冷热水管可提供一套清洁（细菌增长慢）、安全（静液压强度高）、易于安装（热膨胀系数低）、耐热、耐腐蚀、阻燃（氧指数高）、热损失少（热传导率低）的管道系统。
+\subsection{管件、管材}
+由于 CPVC 对严重腐蚀（如硫酸、铬酸、盐酸、烧碱、矿物盐、烃类有机物等化学药品腐蚀）和对恶劣环境侵蚀的优良耐受力，被广泛应用于冶炼工业、石油化工、造纸业、电镀业以及民用排污管道。
+在民用方面，CPVC 管材广泛应用于家庭、办公室、医院、学校等楼房的采暖供热水管，亦可用作太阳能供水管和温泉供水管。使用 CPVC 冷热水管可提供一套清洁（细菌增长慢）、安全（静液压强度高）、易于安装（热膨胀系数低）、耐热、耐腐蚀、阻燃（氧指数高）、热损失少（热传导率低）的管道系统。
+
+\subsection{阻燃材料}
+CPVC 具有优异的阻燃性能及消烟性能，使其成为严格消防要求下的塑料产品的首选，可应用于电子电器产品的配件、包装材料、建筑材料、交通设施等领域，具有十分广阔的发展前景。
+
+\subsection{涂料和黏合剂}
+CPVC 在丙酮、氯代烃等有机溶剂中具有良好的溶解性，因此将 CPVC（或于其他树脂配合）与溶剂结合，可制得具有用途的涂料和黏合剂。CPVC 涂料可应用于化工防腐涂层、材料纤维制品的阻燃、建筑涂料等领域。CPVC 树脂具有优良的耐化学药品性、阻燃性以及耐热性，同时具有低的氧气透过量\footnote{表 \ref{tabCompare}}，使其成为最重要的防腐涂料品种之一。CPVC 制得的黏合剂具有粘结强度高、耐化学性能好等优点，可用来黏合各种 PVC、CPVC 的管件。
 
 \subsection{电力电缆用 CPVC 套管}
-CPVC 套管主要用于电力电缆的铺设并起导向和保护作用，更多的用于路灯目埋地电缆套管。CPVC 套管的维卡软化温度高于 93\cd，不怕因电力电缆在套管发生超载短路而产生的高温。高压电力的输送过程中有电力的损耗，这些损耗的电能都变成了热能，因而电力电缆频繁发热，宜选用维卡软化温度较高的 CPVC 套管。
-
-\subsection{工业用 CPVC 管材}
-工业用 CPVC 管材的国家标准为 GB/T18998.2-2003《工业用氯化聚氯乙烯（PVC-C）管道系统 第 2 部分：管材》。就该标准而言，其与 CPVC 冷热水管几乎是一样的。
+CPVC 套管主要用于电力电缆的铺设并起导向和保护作用，更多的用于路灯目埋地电缆套管，要求电缆套管具有优良的耐热性、绝缘性以及阻燃性。CPVC 套管的维卡软化温度高于 93\cd，不怕因电力传输过程中因焦耳效应产生的高温。
 
 
 \section{热稳定剂概述}
