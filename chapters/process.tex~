@@ -102,12 +102,12 @@ CPVC 配混料在加工或再加工过程都会在较高温度的设备中停留
 \subsection{缺口冲击强度}
 冲击强度是材料在受到冲击后断裂吸收冲击能量的能力，用于评价材料的抗冲击能力或判断材料的脆性和韧性程度。缺口冲击强度的计算公式见式 \eqref{eqImpactS}，其中 $aiN$ 为缺口冲击强度（Izod impact strength of a notched specimen），$x\%$ 为实验测得百分比，$S$ 为缺口处截面面积。
 
-\subsection{SEM 观测冲击断裂面样貌}
-
-
 \begin{equation}
     \label{eqImpactS}
     aiN = (\frac{2.57 J \times x\%}{S}) KJ/m^2
 \end{equation}
 
 本实验采用落锤冲击强度仪进行缺口冲击强度测试\footnote{执行标准 ISO 180/1A}，缺口形状为“V”形，深度为 2 mm，落锤满载能量为 2.75 J。
+
+\subsection{SEM 观测冲击断裂面样貌}
+SEM\footnote{扫描电子显微镜} 的最大特点是图像富有立体感，放大倍数连续可变，特别适合表面形态的研究，是研究固体材料表面三维结构形态的有效工具，成为常用的高分子表面形貌剖析手段。

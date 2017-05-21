@@ -1,4 +1,3 @@
-#!/usr/bin/bash
 # makefile for CPVC.tex
 
 chapters = chapters/equipment.tex chapters/origin.tex chapters/smooth.tex chapters/thermal.tex chapters/introduction.tex chapters/process.tex chapters/thanks.tex
