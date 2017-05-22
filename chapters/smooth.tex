@@ -1,16 +1,14 @@
 \chapter{润滑剂对 CPVC 热稳定性和力学性能作用研究}
 
-一般认为
-
 \section{外润滑剂种类对 CPVC 性能的影响}
 
 \subsection{配方设计}
 本实验中使用了 1 种聚乙烯蜡：PEW-0380 以及 3 种氧化聚乙烯蜡：AC-316、AC-617、AC-629。聚乙烯蜡为乙烯的低度聚合产品，具有良好的中期及后期润滑性，并能在 CPVC 注塑加工中作为脱模剂使用。氧化聚乙烯蜡为含羧基的低分子量聚乙烯，并含有醇、酮及酯类化合物。由于氧化使烷烃链上生成一定数量极性的羧基，提高了它在 CPVC 的相容性，使其同时兼有良好的内、外润滑性能，并赋予制品良好的透明性和光泽性。\par
-在这一部分实验中，主要比较这 4 种外润滑剂对于 CPVC 热稳定性和力学性能的影响。通过保持其他助剂的种类和含量不变，独立改变外润滑剂的种类设计了 4 种配方，具体配方如表 \ref{tabSmoothPre} 所示。
+一般认为，外润滑剂的加入会使材料的力学和耐热性能均有所下降。因此我们通过控制其他组成不变，单独改变外润滑剂的种类，从而找到一种在相同用量下能实现最好润滑效果且对材料热稳定性和力学性能影响最小的外润滑剂种类。具体配方如表 \ref{tab1Pre} 所示。
 
 \begin{table}[!htb]
     \caption{CPVC 4 种外润滑剂配方设计表}
-    \label{tabSmoothPre}
+    \label{tab1Pre}
     \begin{center}
     \footnotesize{
         \begin{tabular}{ccccccccccc}
@@ -124,4 +122,38 @@
 \section{内外润滑剂组合对 CPVC 性能的影响}
 
 \subsection{配方设计}
+由上一组实验我们得到 PEW-0380 外润滑剂具有最好的综合润滑性能，因此在本组实验中我们选用 PEW-0380/G-60 润滑剂组合作为对照组，并且使用 A 蜡和 OP 蜡两种外润滑剂以及 OA2 蜡和 E 蜡两种内润滑剂两两组合配方，共 5 组配方做为实验组进行热稳定性和力学性能的测试。探究内外润滑剂对于 CPVC 热稳定性和加工性能的协同影响。具体配方如表 \ref{tab2Pre} 所示。
 
+\begin{table}[!htb]
+    \caption{CPVC 内外润滑剂组合配方设计表}
+    \label{tab2Pre}
+    \begin{center}
+    \footnotesize{
+        \begin{tabular}{cccccccccccc}
+            \Xhline{1pt}
+            \multirow{2}{*}{\makecell[c]{组别}} & \multirow{2}{*}{\makecell[c]{CPVC}} & \multirow{2}{*}{\makecell[c]{抗冲击\\改性剂}} & \multirow{2}{*}{\makecell[c]{有机锡}} & \multicolumn{3}{c}{外润滑剂} & \multicolumn{3}{c}{内润滑剂} & \multirow{2}{*}{\makecell[c]{加工\\助剂}} & \multirow{2}{*}{\makecell[c]{钛白粉}}   \\
+            \cline{5-10}
+            &&&& \makecell[c]{PEW-0380} & A 蜡 &  OP 蜡 & G-60 & OA2 蜡 & E 蜡	\\ 
+            \Xhline{0.5pt}
+            $S_1$ & 100 & 8 & 2 & 1.3 & & & 1.2 & & & 3 & 2	\\
+            $S_2$ & 100 & 8 & 2 & & 1.3 & & & 1.2 & & 3 & 2	\\
+            $S_3$ & 100 & 8 & 2 & & 1.3 & & & & 1.2 & 3 & 2	\\
+            $S_4$ & 100 & 8 & 2 & & & 1.3 & & 1.2 & & 3 & 2	\\
+            $S_5$ & 100 & 8 & 2 & & & 1.3 & & & 1.2 & 3 & 2	\\
+            \Xhline{1pt}
+        \end{tabular}
+    }
+    \end{center}
+\end{table}
+
+\subsection{玻璃化转变温度}
+
+根据 $S_1 \sim S_5$ 五组配方的 损耗因子-时间 数据制得图 \ref{fig2Tg}，取损耗因子的峰值温度作为试样的玻璃化转变温度。
+
+\begin{figure}[!htb]
+    \begin{center}
+        \input{src/origin/2/tg.tex}
+    \end{center}
+    \caption{外润滑剂玻璃化转变温度}
+    \label{fig2Tg}
+\end{figure}
