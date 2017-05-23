@@ -27,16 +27,16 @@
 
 \subsection{热老化试验箱法}
 
-将 4 组配方的样板进行切割，取 1 $\rm{cm^2}$ 的试样进行测试，结果如表 \ref{tab1static} 所示。
+将 4 组配方的样板进行切割，取 1 $\rm{cm^2}$ 的试样进行测试，结果如表 \ref{tab1static} 所示。$E_1$ 组和 $E_2$ 组的样品在实验开始的 20 min 后表面开始出现起伏，当达到 360 min 时，表面已严重变黑且因 CPVC 分解产生 HCl 而形成了大量的气泡。分析原因是 AC-316 与 AC-617 对 CPVC 树脂的塑化改善不大，CPVC 树脂由于塑化不佳致其容易发生分解。$E_4$ 组在 360 min 时轻微发黄，认为 PEW-0380 对 CPVC 塑化效果改善最大。
 
 \begin{table}[!htb]
-    \caption{$E_1 \sim E_4$ 组热老化试验箱法样品颜色随时间变化}
+    \caption{$E_1 \sim E_4$ 组热烘箱法测定样品颜色随时间变化}
     \label{tab1static}
     \begin{center}
     \footnotesize{
         \begin{tabular}{cccccccc}
             \Xhline{1pt}
-            \multirow{2}{*}{Sample} & \multicolumn{7}{c}{加入不同种类润滑剂的 CPVC 试样 180\cd 烘箱中颜色随时间的变化}\\
+            \multirow{2}{*}{Sample} & \multicolumn{7}{c}{加入不同种类稳定剂的 CPVC 试样 180\cd 烘箱中颜色随时间的变化}\\
             \cline{2-8}
             & 0 min & 20 min & 30 min & 70 min & 120 min & 250 min & 360 min  \\
             \Xhline{0.5pt} 
@@ -49,8 +49,6 @@
     }
     \end{center}
 \end{table}
-
-$E_1$ 组和 $E_2$ 组的样品在实验开始的 20 min 后表面开始出现起伏，当达到 360 min 时，表面已严重变黑且因 CPVC 分解产生 HCl 而形成了大量的气泡。分析原因是 AC-316 与 AC-617 对 CPVC 树脂的塑化改善不大，CPVC 树脂由于塑化不佳致其容易发生分解。$E_4$ 组在 360 min 时轻微发黄，认为 PEW-0380 对 CPVC 塑化效果改善最大。
 
 \subsection{动态热稳定性测试}
 
@@ -96,7 +94,7 @@ $E_1$ 组和 $E_2$ 组的样品在实验开始的 20 min 后表面开始出现�
     \footnotesize{
         \begin{tabular}{cccc}
 			\Xhline{1pt}
-			组别 & \makecell[c]{拉伸强度$\sigma_t$/\\MPa} & \makecell[c]{弯曲强度$\sigma_{b}$/\\Mpa} & \makecell[c]{缺口冲击强度$aiN$/\\$\rm{KJ/m^2}$}\\
+			组别 & \makecell[c]{$\sigma_t$/\\MPa} & \makecell[c]{弯曲强度$\sigma_{b}$/\\Mpa} & \makecell[c]{缺口冲击强度$aiN$/\\$\rm{KJ/m^2}$}\\
 			\Xhline{0.5pt}
 			$E_1$ & 57.30 & 63.73 & 8.01	\\
 			$E_2$ & 59.16 & 60.29 & 10.57	\\
@@ -126,81 +124,8 @@ $E_1$ 组和 $E_2$ 组的样品在实验开始的 20 min 后表面开始出现�
 
 \subsection{热老化试验箱法}
 
-\begin{table}[!htb]
-    \caption{$T_1 \sim T_3$ 组热老化试验箱法样品颜色随时间变化}
-    \label{tab3static}
-    \begin{center}
-    \footnotesize{
-        \begin{tabular}{cccccccc}
-            \Xhline{1pt}
-            \multirow{2}{*}{Sample} & \multicolumn{7}{c}{加入不同种类稳定剂的 CPVC 试样 180\cd 烘箱中颜色随时间的变化}\\
-            \cline{2-8}
-            & 0 min & 20 min & 30 min & 70 min & 120 min & 250 min & 360 min  \\
-            \Xhline{0.5pt} 
-            $T_1$ & \makecell[c]{\includegraphics[width=.1\linewidth]{src/origin/3/static/00.png}} & \makecell[c]{\includegraphics[width=.1\linewidth]{src/origin/3/static/01.png}} & \makecell[c]{\includegraphics[width=.1\linewidth]{src/origin/3/static/02.png}} & \makecell[c]{\includegraphics[width=.1\linewidth]{src/origin/3/static/03.png}} & \makecell[c]{\includegraphics[width=.1\linewidth]{src/origin/3/static/04.png}} & \makecell[c]{\includegraphics[width=.1\linewidth]{src/origin/3/static/05.png}} & \makecell[c]{\includegraphics[width=.1\linewidth]{src/origin/3/static/06.png}}   \\
-            $T_2$ & \makecell[c]{\includegraphics[width=.1\linewidth]{src/origin/3/static/10.png}} & \makecell[c]{\includegraphics[width=.1\linewidth]{src/origin/3/static/11.png}} & \makecell[c]{\includegraphics[width=.1\linewidth]{src/origin/3/static/12.png}} & \makecell[c]{\includegraphics[width=.1\linewidth]{src/origin/3/static/13.png}} & \makecell[c]{\includegraphics[width=.1\linewidth]{src/origin/3/static/14.png}} & \makecell[c]{\includegraphics[width=.1\linewidth]{src/origin/3/static/15.png}} & \makecell[c]{\includegraphics[width=.1\linewidth]{src/origin/3/static/16.png}}  \\
-            $T_3$ & \makecell[c]{\includegraphics[width=.1\linewidth]{src/origin/3/static/20.png}} & \makecell[c]{\includegraphics[width=.1\linewidth]{src/origin/3/static/21.png}} & \makecell[c]{\includegraphics[width=.1\linewidth]{src/origin/3/static/22.png}} & \makecell[c]{\includegraphics[width=.1\linewidth]{src/origin/3/static/23.png}} & \makecell[c]{\includegraphics[width=.1\linewidth]{src/origin/3/static/24.png}} & \makecell[c]{\includegraphics[width=.1\linewidth]{src/origin/3/static/25.png}} & \makecell[c]{\includegraphics[width=.1\linewidth]{src/origin/3/static/26.png}}  \\
-            \Xhline{1pt}
-        \end{tabular}
-    }
-    \end{center}
-\end{table}
-
 \subsection{动态热稳定性测试}
-
-\begin{figure}[!htb]
-    \begin{center}
-        \input{src/origin/3/hakee.tex}
-    \end{center}
-    \caption{热稳定体系动态热稳定性测试图}
-\end{figure}
 
 \subsection{力学性能测试}
 
-\begin{table}[!htb]
-    \caption{$T_1 \sim T_3$ 组力学性能数据表}
-    \label{tab3Mach}
-    \begin{center}
-    \footnotesize{
-        \begin{tabular}{ccccc}
-			\Xhline{1pt}
-			组别 & \makecell[c]{拉伸强度$\sigma_t$/\\MPa} & \makecell[c]{弯曲强度$\sigma_{b}$/\\Mpa} & \makecell[c]{缺口冲击强度$aiN$/\\$\rm{KJ/m^2}$} & \makecell[c]{断裂伸长率\\\%}	\\
-			\Xhline{0.5pt}
-			$T_1$ & 48.84 & 57.40 & 3.50 & 50.45	\\
-			$T_2$ & 53.66 & 61.22 & 5.22 & 62.36	\\
-			$T_3$ & 54.10 & 59.21 & 7.95 & 81.36	\\
-			\Xhline{1pt}
-        \end{tabular}
-    }
-    \end{center}
-\end{table}
-
 \subsection{动态力学热分析（DMA）}
-
-\begin{figure}[!htb]
-    \begin{center}
-        \input{src/origin/3/tg.tex}
-    \end{center}
-    \caption{热稳定体系玻璃化转变温度}
-	\label{fig3Tg}
-\end{figure}
-
-\subsection{维卡软化点}
-
-\begin{table}
-	\caption{热稳定体系维卡软化点数据表}
-	\label{tab3Vic}
-	\begin{center}
-	\footnotesize{
-		\begin{tabular}{cccc}
-			\Xhline{1pt}
-			sample & \makecell[c]{维卡软化点\\\cd}	\\
-			\Xhline{0.5pt}
-			$T_1$ & 114.9	\\
-			$T_2$ & 117.0	\\
-			$T_3$ & 116.4	\\
-			\Xhline{1pt}
-		\end{tabular}
-	}
-	\end{center}
-\end{table}
