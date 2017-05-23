@@ -1,6 +1,6 @@
 # makefile for CPVC.tex
 
-chapters = chapters/equipment.tex chapters/origin.tex chapters/smooth.tex chapters/thermal.tex chapters/introduction.tex chapters/process.tex chapters/thanks.tex
+chapters = chapters/equipment.tex chapters/smooth.tex chapters/thermal.tex chapters/introduction.tex chapters/process.tex chapters/thanks.tex
 
 origins = src/origin/1/hakee.ori src/origin/1/tg.ori src/origin/2/tg.ori src/origin/3/hakee.ori src/origin/3/tg.ori
 
