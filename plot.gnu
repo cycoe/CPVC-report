@@ -76,7 +76,7 @@ set yrange[0: 20]
 set xlabel '时间/min'
 set ylabel '转矩/N$\cdot$m'
 
-plot "src/origin/3/hakee.ori" using 1:2 title 'TMG-234' smooth csplines with lines, "src/origin/3/hakee.ori" using 3:4 title 'T-190 A' smooth csplines with lines, "src/origin/3/hakee.ori" using 5:6 title 'Orgin Tin(l)' smooth csplines with lines
+plot "src/origin/3/hakee.ori" using 1:2 title 'TMG-234' smooth csplines with lines, "src/origin/3/hakee.ori" using 3:4 title 'T-190A' smooth csplines with lines, "src/origin/3/hakee.ori" using 5:6 title 'Orgin Tin(l)' smooth csplines with lines
 
 
 set output "src/origin/3/tg.tex"
@@ -99,7 +99,7 @@ set label '138.32\cd' at 115, 0.9 offset -7, 0
 set xlabel '温度/\cd'
 set ylabel '损耗因子'
 
-plot "src/origin/3/tg.ori" using 1:2 title 'TMG-234' smooth csplines with lines, "src/origin/3/tg.ori" using 1:3 title 'T-190 A' smooth csplines with lines, "src/origin/3/tg.ori" using 1:4 title 'Orgin Tin(l)' smooth csplines with lines
+plot "src/origin/3/tg.ori" using 1:2 title 'TMG-234' smooth csplines with lines, "src/origin/3/tg.ori" using 1:3 title 'T-190A' smooth csplines with lines, "src/origin/3/tg.ori" using 1:4 title 'Orgin Tin(l)' smooth csplines with lines
 
 
 set output "src/example/hakee.tex"
