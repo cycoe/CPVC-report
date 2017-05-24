@@ -70,7 +70,7 @@ set output "src/origin/3/hakee.tex"
 unset key
 set key bottom right box
 
-set xrange[0: 11]
+set xrange[0: 9.5]
 set yrange[0: 20]
 
 set xlabel '时间/min'
@@ -82,10 +82,19 @@ plot "src/origin/3/hakee.ori" using 1:2 title 'TMG-234' smooth csplines with lin
 set output "src/origin/3/tg.tex"
 
 unset key
-set key top left box
+unset label
+unset arrow
+set key center left box
 
-set xrange[40: 200]
+set xrange[40: 180]
 set yrange[0: 1]
+
+set arrow from 115, 0.7 to 137.78, 0.6104 lt 1
+set label '137.78\cd' at 115, 0.7 offset -7, 0
+set arrow from 160, 0.8 to 151.77, 0.6964 lt 2
+set label '151.77\cd' at 160, 0.8 offset -3.5, 0.5
+set arrow from 115, 0.9 to 138.32, 0.8452 lt 3
+set label '138.32\cd' at 115, 0.9 offset -7, 0
 
 set xlabel '温度/\cd'
 set ylabel '损耗因子'
