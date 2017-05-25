@@ -15,7 +15,8 @@
 %       ctexrep: ctex report
 %---------------------------------------------------------------%
     
-\documentclass[a4paper, oneside, onecolumn, notitlepage, 12pt]{ctexrep}    %transmag 实现双列排版，摘要跨列
+\documentclass[a4paper, oneside, onecolumn, titlepage, 12pt]{ctexrep}    % transmag 实现双列排版，摘要跨列
+% titlepage 标题单独分页 notitlepage 标题不单独分页
 
 %----------------------------引入宏包---------------------------%
 \usepackage[utf8]{inputenc} %特殊符号
@@ -94,13 +95,14 @@
 %-------------------------------设置页面属性-----------------------------%
 \usepackage{indentfirst}
 \setlength{\parindent}{2em} %设置自动缩进为两格
-%\renewcommand{\baselinestretch}{1.2}   %设置 1.2 倍行距
-%\setlength{\baselineskip}{20pt}    %设置行距
-\linespread{1.2}            %设置 1.2 倍行距
+\setlength{\baselineskip}{22pt}    %设置行距
+% \renewcommand{\baselinestretch}{1.2}   %设置 1.2 倍行距
+% \linespread{1.2}            %设置 1.2 倍行距
 \geometry{left=2.7cm, right=2.7cm, top=3.5cm, bottom=2.6cm} %设置页边距
 \setlength{\itemsep}{0pt}   %设置列表元素间距
-%\setlength{\parskip}{0}  %设置段间距
+\setlength{\parskip}{0pt}  %设置段间距
 \captionsetup{font={small}}     %设置图表标题大小
+\CTEXsetup[beforeskip={0pt}]{chapter}	%章节前不留空白
 
 
 %-------------------------------设置数学环境-----------------------------%
@@ -125,13 +127,22 @@ width0pt\right\delimright_{\rlap{$\scriptstyle#3$}}$};}}
 %   \chemfig{-[@{op,.75}]CH=CH-\lewis{2.,C}H-CH_2-[@{cl,.25}]}  此处.75  .25两个参数分别为两个化学键在括号左边部分的比例
 %   \makebraces[5pt,5pt]{}{op}{cl}  此处 5pt 为两个括号的大小
 
-%引用 tikz 装饰库
+% 引用 tikz 装饰库，用于绘制波浪形键
 \usetikzlibrary{decorations.pathmorphing}
+
+% 定义矩形框
+\usetikzlibrary{shapes.geometric, arrows}
+\tikzstyle{pro} = [rectangle, minimum width = 3cm, minimum height = 1cm, text centered, draw = black]
+\tikzstyle{io} = [rectangle, rounded corners, minimum width = 3cm, minimum height = 0.7cm, text centered, draw = black]
+\tikzstyle{arrow} = [, ->, >= stealth]
+\tikzstyle{line} = [, -, >= stealth]
 
 
 %-------------------------------设置快捷命令-----------------------------%
 \newcommand{\cd}{$^{\circ}$C}  %摄氏度
 \newcommand{\va}{\vphantom}         %使第一个化学键居中
+\newcommand{\borderLine}{\Xhline{1.5pt}}	%设置表格边界线命令
+\newcommand{\interLine}{\Xhline{0.5pt}}		%设置表格分隔线命令
 
 
 
@@ -141,7 +152,7 @@ width0pt\right\delimright_{\rlap{$\scriptstyle#3$}}$};}}
     \wuhao 朱浩南，高材1314，2013012433\\
     \wuhao 指导教师：武德珍，教授
 }
-\date{April,2017}
+\date{}
 
 %设置页眉页脚
 \fancyhf{}
@@ -178,12 +189,8 @@ width0pt\right\delimright_{\rlap{$\scriptstyle#3$}}$};}}
 	\textbf{Keywords: chlorinated polyvinyl chloride; heat stabilizer; lubricant; organotin; polyethylene wax}
 \end{abstract}
 
-
-%\renewcommand\abstractname{Abstract}
-%\begin{abstract}
-%    \xiaosihao CPVC is an unstable
-%\end{abstract}
-
+\pagenumbering{Roman}
+\setcounter{page}{1}
 \tableofcontents
 
 \include{chapters/introduction}

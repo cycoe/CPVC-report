@@ -15,7 +15,8 @@
 %       ctexrep: ctex report
 %---------------------------------------------------------------%
     
-\documentclass[a4paper, oneside, onecolumn, notitlepage, 12pt]{ctexrep}    %transmag 实现双列排版，摘要跨列
+\documentclass[a4paper, oneside, onecolumn, titlepage, 12pt]{ctexrep}    % transmag 实现双列排版，摘要跨列
+% titlepage 标题单独分页 notitlepage 标题不单独分页
 
 %----------------------------引入宏包---------------------------%
 \usepackage[utf8]{inputenc} %特殊符号
@@ -94,13 +95,14 @@
 %-------------------------------设置页面属性-----------------------------%
 \usepackage{indentfirst}
 \setlength{\parindent}{2em} %设置自动缩进为两格
-%\renewcommand{\baselinestretch}{1.2}   %设置 1.2 倍行距
-%\setlength{\baselineskip}{20pt}    %设置行距
-\linespread{1.2}            %设置 1.2 倍行距
+\setlength{\baselineskip}{22pt}    %设置行距
+% \renewcommand{\baselinestretch}{1.2}   %设置 1.2 倍行距
+% \linespread{1.2}            %设置 1.2 倍行距
 \geometry{left=2.7cm, right=2.7cm, top=3.5cm, bottom=2.6cm} %设置页边距
 \setlength{\itemsep}{0pt}   %设置列表元素间距
-%\setlength{\parskip}{0}  %设置段间距
+\setlength{\parskip}{0pt}  %设置段间距
 \captionsetup{font={small}}     %设置图表标题大小
+\CTEXsetup[beforeskip={0pt}]{chapter}	%章节前不留空白
 
 
 %-------------------------------设置数学环境-----------------------------%
@@ -125,13 +127,21 @@ width0pt\right\delimright_{\rlap{$\scriptstyle#3$}}$};}}
 %   \chemfig{-[@{op,.75}]CH=CH-\lewis{2.,C}H-CH_2-[@{cl,.25}]}  此处.75  .25两个参数分别为两个化学键在括号左边部分的比例
 %   \makebraces[5pt,5pt]{}{op}{cl}  此处 5pt 为两个括号的大小
 
-%引用 tikz 装饰库
+% 引用 tikz 装饰库，用于绘制波浪形键
 \usetikzlibrary{decorations.pathmorphing}
+
+% 定义矩形框
+\usetikzlibrary{shapes.geometric, arrows}
+\tikzstyle{pro} = [rectangle, minimum width = 3cm, minimum height = 1cm, text centered, draw = black]
+\tikzstyle{io} = [rectangle, rounded corners, minimum width = 3cm, minimum height = 0.7cm, text centered, draw = black]
+\tikzstyle{arrow} = [, ->, >= stealth]
+\tikzstyle{line} = [, -, >= stealth]
 
 
 %-------------------------------设置快捷命令-----------------------------%
 \newcommand{\cd}{$^{\circ}$C}  %摄氏度
 \newcommand{\va}{\vphantom}         %使第一个化学键居中
+\newcommand{\edge}
 
 
 
@@ -141,7 +151,7 @@ width0pt\right\delimright_{\rlap{$\scriptstyle#3$}}$};}}
     \wuhao 朱浩南，高材1314，2013012433\\
     \wuhao 指导教师：武德珍，教授
 }
-\date{April,2017}
+\date{}
 
 %设置页眉页脚
 \fancyhf{}
@@ -163,15 +173,23 @@ width0pt\right\delimright_{\rlap{$\scriptstyle#3$}}$};}}
 
 \maketitle
 
-\begin{abstract}
-    \xiaosihao 氯化聚氯乙烯（CPVC）的热稳定性差，熔体黏度高，加工时易发生热分解脱氯化氢，因此需要在 CPVC 加工过程中加入热稳定剂和润滑剂。长期以来，铅盐类热稳定剂在
+\begin{abstract}\xiaosihao
+    氯化聚氯乙烯（CPVC）的热稳定性差，熔体黏度高，加工时易发生热分解脱氯化氢，因此需要在 CPVC 加工过程中加入热稳定剂和润滑剂。润滑剂是 CPVC 加工过程中不可缺少的一类加工助剂，但润滑剂的加入会对材料的力学性能产生一定的影响。因此在本实验的第一部分对不同类型的外润滑剂进行了研究，通过热性能和力学性能来寻找相同加入量下润滑效果最好的外润滑剂。\par
+    长期以来，铅盐类热稳定剂被作为热稳定剂的首选使用，但随着人们对铅污染的认识加深，铅盐类热稳定剂逐渐被其他类型的热稳定剂替代。如有机锡热稳定剂因其稳定效果好、污染小的特点，正逐渐成为 CPVC 加工过程中的稳定剂选择。但由于有机锡的价格相对较高，使其的应用发展受到了限制。因此本实验的第二部分正是研究不同型号和种类的有机锡热稳定剂的热性能和力学性能，从而找到在相同用量下能提供较好热稳定性的有机锡品种。\par
+    为寻找润滑效果最好的外润滑剂，本文对 AC-316、AC-617、AC-629 和 PEW-0380 四种外润滑剂进行了静态热稳定性、动态热稳定性、力学性能以及动态力学热分析的测试。研究发现，AC-629 与 PEW-0380 能提供较好的润滑效果和塑化效果；但在较高温度下，由于 AC-617 与 AC-629 的滴点较低，使得润滑剂提前失效，润滑效果反而下降；在四种外润滑剂中，PEW-0380 能使 CPVC 提供最好冲击强度。在本实验的第二部分，对 TMG-234、T-190A 和液体有机锡 3 种有机锡热稳定剂进行了测试。研究结果表明，液体有机锡能提供较好的热稳定性，但其长期热稳定性较差且热稳定时间短，同时其对 CPVC 的强度和韧性的损失较小；T-190A 对 CPVC 的硬度损失较小。\par
+    \textbf{关键词：氯化聚氯乙烯；热稳定剂；润滑剂；有机锡；聚乙烯蜡}
 \end{abstract}
 
-%\renewcommand\abstractname{Abstract}
-%\begin{abstract}
-%    \xiaosihao CPVC is an unstable
-%\end{abstract}
+\renewcommand\abstractname{Abstract}
+\begin{abstract}\xiaosihao
+	Chlorinated polyvinyl chloride (CPVC) has poor thermal stability, high melt viscosity, and is prone to thermal decomposition of dehydrochlorination during processing. Therefore, it is necessary to add heat stabilizer and lubricant to CPVC. Lubricant is an indispensable kind of processing auxiliaries in CPVC process, but the addition of lubricant will have some influence on the mechanical properties of the material. Therefore, in the first part of this experiment, different types of external lubricants were studied, through the thermal properties and mechanical properties to find the same amount of lubrication under the best external lubricants.\par
+	For a long time, lead salt heat stabilizers have been preferred as heat stabilizers, but with the deepening of lead pollution, lead salt heat stabilizers are gradually being replaced by other types of heat stabilizers. Such as organic tin heat stabilizer because of its stable effect, the characteristics of small pollution, is gradually becoming the CPVC process of stabilizer choice. But because of the relatively high price of organic tin, so that its application development has been limited. Therefore, the second part of this experiment is to study the different types and types of organic tin heat stabilizer thermal and mechanical properties, in order to find the same amount can provide better thermal stability of organic tin varieties.\par
+	In order to find the best external lubricants, the static stability, dynamic thermal stability, mechanical properties and dynamic mechanics of AC-316, AC-617, AC-629 and PEW-0380 were studied. Thermal analysis of the test. The results show that AC-629 and PEW-0380 can provide better lubricating effect and plasticizing effect. However, at higher temperature, the lower stoppage point of AC-617 and AC-629 causes the lubricant to fail prematurely and lubricate The effect is reduced; in the four external lubricants, PEW-0380 can make CPVC provide the best impact strength. In the second part of this experiment, TMG-234, T-190A and liquid organotin three organic tin heat stabilizers were tested. The results show that liquid organotin can provide better thermal stability, but its long-term thermal stability is poor and the heat stability time is short, while its loss of toughness and toughness of CPVC is smaller; T-190A hardness of CPVC Loss is small.\par
+	\textbf{Keywords: chlorinated polyvinyl chloride; heat stabilizer; lubricant; organotin; polyethylene wax}
+\end{abstract}
 
+\pagenumbering{Roman}
+\setcounter{page}{1}
 \tableofcontents
 
 \include{chapters/introduction}

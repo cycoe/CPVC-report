@@ -7,9 +7,9 @@
     \label{tabRaw}
     \begin{center}
         \begin{tabular}{ccc}
-             \Xhline{1pt}
+             \borderLine
              原料名称 & 型号 & 生产厂商		\\
-             \Xhline{0.5pt}
+             \interLine
              CPVC 树脂 & 工业级 & 上海氯碱化工股份有限公司	\\
 			 PVC 树脂 & SG-5 & 上海氯碱化工股份有限公司		\\
 % 			 \cline{1-1}
@@ -26,7 +26,7 @@
 			 抗冲改性剂 & MB838A &	\\
 			 加工助剂 & 罗门哈斯 K-175P &	\\
 			 颜料 & 钛白粉 &	\\
-             \Xhline{1pt}
+             \borderLine
         \end{tabular}
     \end{center}
 \end{table}
@@ -38,13 +38,13 @@
 	\label{tabSmootherHoney}
 	\begin{center}
 		\begin{tabular}{cccc}
-				\Xhline{1pt}
+				\borderLine
 				产品型号 & 密度/(g/$\rm{cm^3}$) & 滴点/\cd & 黏度 @ 140\cd/Pa$\cdot$s   \\
-				\Xhline{0.5pt}
+				\interLine
 				AC-316 & 0.98 & 140 & 8500 \\
 				AC-617 & 0.91 & 101 & 180  \\
 				AC-629 & 0.93 & 101 & 200  \\
-				\Xhline{1pt}
+				\borderLine
 		\end{tabular}
 	\end{center}
 \end{table}
@@ -52,14 +52,14 @@
 
 \section{实验主要设备及仪器}
 
-\begin{table}[!htb]
+\begin{table}[H]
 	\caption{实验仪器明细表}
 	\label{tabEqu}
 	\begin{center}
 		\begin{tabular}{ccc}
-				\Xhline{1pt}
+				\borderLine
 				仪器名称 & 型号 & 生产厂商		\\
-				\Xhline{0.5pt}
+				\interLine
 				高速混合机 & SHR & 张家港市永利机械有限公司	\\
 				开放式炼胶机 & XK-160 & 无锡明达橡塑机械有限公司	\\
 				平板硫化机 & QLB-D & 上海橡胶机械厂	\\
@@ -73,7 +73,7 @@
 				塑料摆锤冲击试验机 & ZBC & 美特斯工业系统（中国）有限公司	\\
 				维卡软化点试验机 & ZWK & 美特斯工业系统（中国）有限公司	\\
 				动态力学分析仪 & DMA Q800 & 美国TA公司	\\
-				\Xhline{1pt}
+				\borderLine
 		\end{tabular}
 	\end{center}
 \end{table}
@@ -82,7 +82,21 @@
 
 \begin{figure}[!htb]
     \begin{center}
-        
+		\begin{tikzpicture}[node distance = 2cm]
+			% nodes
+			\node(pre)[pro]{配方设计};
+			\node(smooth)[io, below of = pre, xshift = -2.5cm]{润滑剂};
+			\node(stablizer)[io, below of = pre, xshift = 2.5cm]{热稳定剂};
+			\node(sample)[pro, below of = smooth, xshift = 2.5cm]{制样};
+			\node(exp)[pro, below of = sample]{性能测试};
+			
+			% arrows
+			\draw[arrow](pre.west) -| (smooth.north);
+			\draw[arrow](pre.east) -| (stablizer.north);
+			\draw[arrow](smooth.south) |- (sample.west);
+			\draw[arrow](stablizer.south) |- (sample.east);
+			\draw[arrow](sample) -- (exp);
+		\end{tikzpicture}
     \end{center}
     \caption{研究方案流程图}
 \end{figure}
@@ -96,11 +110,11 @@ CPVC 润滑体系与热稳定体系采用控制变量法进行配方设计，配
     \begin{center}
     \footnotesize{
         \begin{tabular}{ccccccc}
-            \Xhline{1pt}
+            \borderLine
             CPVC & 抗冲击改性剂 & 热稳定剂 & 外润滑剂 & 内润滑剂 & 加工助剂 & 钛白粉 \\
-            \Xhline{0.5pt}
+            \interLine
             100\footnotemark[1] & 8 & 2 & 1.3 & 1.2 & 3 & 2   \\
-            \Xhline{1pt}
+            \borderLine
         \end{tabular}
     }
     \end{center}
