@@ -15,7 +15,7 @@
 %       ctexrep: ctex report
 %---------------------------------------------------------------%
     
-\documentclass[a4paper, oneside, onecolumn, titlepage, 12pt]{ctexrep}    % transmag 实现双列排版，摘要跨列
+\documentclass[a4paper, twoside, onecolumn, titlepage, 12pt]{ctexrep}    % transmag 实现双列排版，摘要跨列
 % titlepage 标题单独分页 notitlepage 标题不单独分页
 
 %----------------------------引入宏包---------------------------%
@@ -148,7 +148,7 @@ width0pt\right\delimright_{\rlap{$\scriptstyle#3$}}$};}}
 
 
 %--------------------------------添加页面元素----------------------------%
-\title{\sanhao 氯化聚氯乙烯热稳定和润滑体系研究}
+\title{\sanhao \textbf{氯化聚氯乙烯热稳定和润滑体系研究}}
 \author{
     \wuhao 朱浩南，高材1314，2013012433\\
     \wuhao 指导教师：武德珍，教授
@@ -173,6 +173,7 @@ width0pt\right\delimright_{\rlap{$\scriptstyle#3$}}$};}}
 %-------------------------------文档部分---------------------------------%
 \begin{document}
 
+\pagestyle{empty}
 \maketitle
 
 \begin{abstract}\xiaosihao
@@ -190,6 +191,7 @@ width0pt\right\delimright_{\rlap{$\scriptstyle#3$}}$};}}
 	\textbf{Keywords: chlorinated polyvinyl chloride; heat stabilizer; lubricant; organotin; polyethylene wax}
 \end{abstract}
 
+\pagestyle{fancy}
 \pagenumbering{Roman}
 \setcounter{page}{1}
 \tableofcontents
