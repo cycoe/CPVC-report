@@ -84,18 +84,40 @@
     \begin{center}
 		\begin{tikzpicture}[node distance = 2cm]
 			% nodes
-			\node(pre)[pro]{配方设计};
-			\node(smooth)[io, below of = pre, xshift = -2.5cm]{润滑剂};
-			\node(stablizer)[io, below of = pre, xshift = 2.5cm]{热稳定剂};
-			\node(sample)[pro, below of = smooth, xshift = 2.5cm]{制样};
+			\node(smooth)[io]{润滑剂};
+			\node(stablizer)[io, below of = smooth]{热稳定剂};
+			\node(p1)[coordinate, right of = smooth, yshift = -1cm]{};
+			\node(pre)[pro, right of = p1]{配方设计};
+			\node(sample)[pro, below of = pre]{制样};
 			\node(exp)[pro, below of = sample]{性能测试};
+			\node(p2)[coordinate, right of = exp, xshift = 1cm]{};
+			\node(bend)[pro, right of = p2]{弯曲强度};
+			\node(tensile)[pro, above of = bend, node distance = 1.5cm]{拉伸强度};
+			\node(dynamic)[pro, above of = tensile, node distance = 1.5cm]{动态热稳定性};
+			\node(loss)[pro, above of = dynamic, node distance = 1.5cm]{热失重分析};
+			\node(static)[pro, above of = loss, node distance = 1.5cm]{静态热稳定性};
+			\node(impact)[pro, below of = bend, node distance = 1.5cm]{冲击强度};
+			\node(SEM)[pro, below of = impact, node distance = 1.5cm]{扫描电镜测试};
+			\node(DMA)[pro, below of = SEM, node distance = 1.5cm]{动态力学热分析};
+			\node(vic)[pro, below of = DMA, node distance = 1.5cm]{维卡软化点};
+			\node(result)[io, below of = exp]{实验数据分析与结论};
 			
 			% arrows
-			\draw[arrow](pre.west) -| (smooth.north);
-			\draw[arrow](pre.east) -| (stablizer.north);
-			\draw[arrow](smooth.south) |- (sample.west);
-			\draw[arrow](stablizer.south) |- (sample.east);
-			\draw[arrow](sample) -- (exp);
+			\draw[arrow](smooth.east) -| (p1) -- (pre);
+			\draw[arrow](stablizer.east) -| (p1) -- (pre);
+			\draw[arrow](pre.south) -- (sample);
+			\draw[arrow](sample.south) -- (exp);
+			\draw[line](exp.east) -- (p2);
+			\draw[arrow](p2) |- (tensile);
+			\draw[arrow](p2) |- (dynamic);
+			\draw[arrow](p2) |- (loss);
+			\draw[arrow](p2) |- (static);
+			\draw[arrow](p2) |- (impact);
+			\draw[arrow](p2) |- (SEM);
+			\draw[arrow](p2) |- (DMA);
+			\draw[arrow](p2) |- (vic);
+			\draw[arrow](p2) -- (bend);
+			\draw[arrow](exp.south) -- (result);
 		\end{tikzpicture}
     \end{center}
     \caption{研究方案流程图}
@@ -139,7 +161,7 @@ CPVC 润滑体系与热稳定体系采用控制变量法进行配方设计，配
 
 
 \section{性能测试}
-CPVC 作为含氯聚合物，其热分解主要发生在加工与使用阶段。特别在加工过程中，CPVC 树脂长时间处于高温，或在较高温度下长期使用都会使 CPVC 发生热分解与热老化。加工状态又可分为静置压制或模中停留等静态受热与注塑、挤出、混炼、辊压等动态受热过程。因此 CPVC 的热稳定性测试分为静态热稳定测试与动态热稳定测试，同时用玻璃化转变温度和维卡热变形温度对 CPVC 的耐热性能进行表征。\par
+CPVC 作为一种含氯聚合物，极易在受热时发生热分解。在加工过程中，由于 CPVC 长期处于受热状态，或在较高的使用温度下都会使得 CPVC 材料发生老化与热分解。同时，受热状态又可分为静态受热与动态受热，因此采用静态热稳定性测试和动态热稳定性测试分别对 CPVC 的热稳定性进行表征。同时用玻璃化转变温度和维卡热变形温度对 CPVC 在高温下的性能进行表征。\par
 对于力学性能采用国家标准对 CPVC 的拉伸强度、弯曲强度、冲击强度进行测试，同时采用 SEM\footnote{扫描电子显微镜} 对冲击断面的形貌进行观测。
 
 \subsection{热老化试验箱法测试}
