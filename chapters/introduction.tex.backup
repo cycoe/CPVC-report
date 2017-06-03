@@ -24,7 +24,7 @@ CPVC 树脂在管件管材、电子电器设备配件等方面应用广泛，主
 	\caption{通用 CPVC 的力学性能数据表}
 	\label{tabCPVCMach}
 	\begin{center}
-	\small{
+	\footnotesize{
 		\begin{tabularx}{\textwidth}{XX|XXXX}
 			\borderLine
 			\multicolumn{2}{c|}{物理参数} & \multicolumn{4}{c}{力学参数} \\
@@ -43,15 +43,15 @@ CPVC 树脂在管件管材、电子电器设备配件等方面应用广泛，主
 	\label{tabCPVCTher}
 	\begin{center}
 	\footnotesize{
-		\begin{tabular}{cccccc}
+		\begin{tabularx}{\textwidth}{XXXXXX}
 			\borderLine
-			\multicolumn{6}{c}{热学参数}    \\
+			\multicolumn{6}{c}{热学参数}	\\
 			\borderLine
 			\mc{熔点($T_m$)/\\\cd} & \mc{玻璃化转变温度($T_g$)/\\\cd} & \mc{维卡软化点/\\\cd} & \mc{热导率/\\($\rm{W/(m\cdot K)}$)} & \mc{线膨胀系数($\alpha$)/\\K} & \mc{比热容($c$)/\\($\rm{kJ/(kg\cdot K)}$)} \\
 			\interLine
 			150 & 106$\sim$115 & 106$\sim$115 & 0.16 & $\rm{8 \times 10^{-5}}$ & 0.9    \\
 			\borderLine
-		\end{tabular}
+		\end{tabularx}
 	}
 	\end{center}
 \end{table}

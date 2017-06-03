@@ -15,7 +15,7 @@
 %       ctexrep: ctex report
 %---------------------------------------------------------------%
     
-\documentclass[a4paper, twoside, onecolumn, titlepage, 12pt]{ctexrep}    % transmag 实现双列排版，摘要跨列
+\documentclass[a4paper, twoside, onecolumn, notitlepage, 12pt]{ctexrep}    % transmag 实现双列排版，摘要跨列
 % titlepage 标题单独分页 notitlepage 标题不单独分页
 
 %----------------------------引入宏包---------------------------%
@@ -40,6 +40,7 @@
 \usepackage{float}      %设定图片的位置    \[H]可固定图片位置
 \usepackage{tikz}       %tikz图形库
 \usepackage{flafter}	%防止图表出现在引述文字之前
+\usepackage{tabularx}
 
 
 %----------------------------设置字体族--------------------------%
@@ -92,7 +93,7 @@
 %\renewcommand{\thefootnote}{\alph{footnote}}
 
 
-%-------------------------------设置页面属性-----------------------------%
+%-------------------------------设置间距属性-----------------------------%
 \usepackage{indentfirst}
 \setlength{\parindent}{2em} %设置自动缩进为两格
 \setlength{\baselineskip}{22pt}    %设置行距
@@ -101,8 +102,9 @@
 \geometry{left=2.7cm, right=2.7cm, top=3.5cm, bottom=2.6cm} %设置页边距
 \setlength{\itemsep}{0pt}   %设置列表元素间距
 \setlength{\parskip}{0pt}  %设置段间距
-\captionsetup{font={small}}     %设置图表标题大小
 \CTEXsetup[beforeskip={0pt}]{chapter}	%章节前不留空白
+\captionsetup{font={small}}				%设置图表标题大小
+\setlength{\abovecaptionskip}{-0pt}		%图表标题与图标间距
 
 
 %-------------------------------设置数学环境-----------------------------%
@@ -142,17 +144,18 @@ width0pt\right\delimright_{\rlap{$\scriptstyle#3$}}$};}}
 %-------------------------------设置快捷命令-----------------------------%
 \newcommand{\cd}{$^{\circ}$C}  %摄氏度
 \newcommand{\va}{\vphantom}         %使第一个化学键居中
-\newcommand{\borderLine}{\Xhline{1.5pt}}	%设置表格边界线命令
+\newcommand{\borderLine}{\Xhline{1pt}}	%设置表格边界线命令
 \newcommand{\interLine}{\Xhline{0.5pt}}		%设置表格分隔线命令
+\newcommand{\mc}{\makecell[c]}
 
 
 
 %--------------------------------添加页面元素----------------------------%
-\title{\sanhao \textbf{氯化聚氯乙烯热稳定和润滑体系研究}}
-\author{
-    \wuhao 朱浩南，高材1314，2013012433\\
-    \wuhao 指导教师：武德珍，教授
-}
+\title{\sanhao \textbf{氯化聚氯乙烯热稳定和润滑体系研究}\vspace{-8ex}}
+% \author{
+%     \wuhao 朱浩南，高材1314，2013012433\\
+%     \wuhao 指导教师：武德珍，教授
+% }
 \date{}
 
 %设置页眉页脚
@@ -199,11 +202,12 @@ width0pt\right\delimright_{\rlap{$\scriptstyle#3$}}$};}}
 \include{chapters/introduction}
 \include{chapters/experiment}
 \include{chapters/results}
-\include{chapters/thanks}
 
 \clearpage
 \addcontentsline{toc}{chapter}{参考文献}
 \bibliographystyle{unsrtnat}    %unsrtnat: sort with cite order; plainnat: sort with author name and year
 \bibliography{biblio.bib}
+
+\include{chapters/thanks}
 
 \end{document}
