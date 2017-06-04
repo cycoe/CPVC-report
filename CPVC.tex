@@ -48,10 +48,10 @@
 \setmainfont{Times New Roman}
 \setsansfont{Arial}
 \setmonofont{Noto Mono}
-\setCJKmainfont[BoldFont=SimHei]{SimSun}
+\setCJKmainfont[BoldFont=SimHei]{STSong}
 
 %\newcommand{\song}{\CJKfamily{simsun}}  % 宋体
-\newcommand{\hei}{\CJKfamily{SimHei}}   % 黑体
+\newCJKfontfamily{\hei}{\CJKfamily{SimHei}}   % 黑体
 
 
 %------------------------------设置字体大小------------------------%  
@@ -102,11 +102,15 @@
 \geometry{left=2.7cm, right=2.7cm, top=3.5cm, bottom=2.6cm} %设置页边距
 \setlength{\itemsep}{0pt}   %设置列表元素间距
 \setlength{\parskip}{0pt}  %设置段间距
-\CTEXsetup[beforeskip={0pt}]{chapter}	%章节前不留空白
 \captionsetup{font={small}}				%设置图表标题大小
-\setlength{\abovecaptionskip}{-0pt}		%图表标题与图标间距
+\setlength{\abovecaptionskip}{-0pt}		%图表标题与图表间距
 % \setlength{\bibsep}{5pt}				%参考文献间距
+\renewcommand\arraystretch{1.2}			%设置表格内部高度
 
+\CTEXsetup[beforeskip={0pt}]{chapter}	%章节前不留空白
+% \CTEXsetup[beforeskip={12pt}, afterskip={12pt}]{section}
+% \CTEXsetup[beforeskip={6pt}, afterskip={6pt}]{subsection}
+% \CTEXsetup[beforeskip={0pt}, afterskip={0pt}]{subsubsection}
 
 %-------------------------------设置数学环境-----------------------------%
 \setatomsep{2em}    %设置全局化学键长度
@@ -179,8 +183,10 @@ width0pt\right\delimright_{\rlap{$\scriptstyle#3$}}$};}}
 
 \pagestyle{fancy}
 \pagenumbering{Roman}
-\setcounter{page}{1}
 
+\include{chapters/announce}
+
+\setcounter{page}{1}
 \maketitle
 
 \begin{abstract}\xiaosihao
