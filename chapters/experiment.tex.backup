@@ -2,32 +2,33 @@
 
 \section{实验原料}
 
+实验中需要使用的原料的型号与生产厂商如表 \ref{tabRaw} 所示。
+
 \begin{table}[!htb]
     \caption{实验原料明细表}
     \label{tabRaw}
     \begin{center}
+		\small{
         \begin{tabular}{ccc}
              \borderLine
              原料名称 & 型号 & 生产厂商		\\
              \interLine
              CPVC 树脂 & 工业级 & 上海氯碱化工股份有限公司	\\
 			 PVC 树脂 & SG-5 & 上海氯碱化工股份有限公司		\\
-% 			 \cline{1-1}
-			 \multirow{3}{*}{有机锡稳定剂} & T-190A & 法国阿科玛公司	\\
-			 & TMG-234 & \\
-			 & 液体有机锡 & 山东祥生塑胶有限公司\\
-% 			 \cline{1-1}
-			 \multirow{4}{*}{外润滑剂} & AC-316 & \textit{Honeywell}	\\
-			 & AC-617 & \textit{Honeywell}	\\
-			 & AC-629 & \textit{Honeywell}	\\
-			 & PEW-0380 &	\\
-% 			 \cline{1-1}
-			 内润滑剂 & 汉高 G-60 &	\\
-			 抗冲改性剂 & MB838A &	\\
-			 加工助剂 & 罗门哈斯 K-175P &	\\
-			 颜料 & 钛白粉 &	\\
+			 有机锡稳定剂 & T-190A & 法国阿科玛公司	\\
+			 有机锡稳定剂 & TMG-234 & \textit{TMG Chemicls Co., Ltd.}\\
+			 有机锡稳定剂 & 液体有机锡 & 山东祥生塑胶有限公司\\
+			 外润滑剂 & AC-316 & \textit{Honeywell}	\\
+			 外润滑剂 & AC-617 & \textit{Honeywell}	\\
+			 外润滑剂 & AC-629 & \textit{Honeywell}	\\
+			 外润滑剂 & PEW-0380 & 南京天诗新材料科技有限公司	\\
+			 内润滑剂 & 汉高 G-60 & 德国汉高公司	\\
+			 抗冲改性剂 & MB838A & \textit{LG Chem Ltd.}	\\
+			 加工助剂 & 罗门哈斯 K-175P & 上海亚基化工有限公司	\\
+			 颜料 & 钛白粉 & 上海翼铸实业有限公司	\\
              \borderLine
         \end{tabular}
+		}
     \end{center}
 \end{table}
 
@@ -37,6 +38,7 @@
 	\caption{AC-316、AC-617、AC-629 的物理参数对比}
 	\label{tabSmootherHoney}
 	\begin{center}
+		\small{
 		\begin{tabular}{cccc}
 				\borderLine
 				产品型号 & 密度/(g/$\rm{cm^3}$) & 滴点/\cd & 黏度 @ 140\cd/Pa$\cdot$s   \\
@@ -46,16 +48,20 @@
 				AC-629 & 0.93 & 101 & 200  \\
 				\borderLine
 		\end{tabular}
+		}
 	\end{center}
 \end{table}
 
 
 \section{实验主要设备及仪器}
 
+
+
 \begin{table}[H]
 	\caption{实验仪器明细表}
 	\label{tabEqu}
 	\begin{center}
+		\small{
 		\begin{tabular}{ccc}
 				\borderLine
 				仪器名称 & 型号 & 生产厂商		\\
@@ -66,19 +72,22 @@
 				电子万能材料试验机 & INSTRON5567 & 美斯特工业系统（中国）有限公司	\\
 				电子天平 & AR153CN & 奥豪斯仪器（上海）有限公司	\\
 				真空干燥箱 & DZF-6050型 & 上海一恒科技有限公司	\\
-				HAAKE 转矩流变仪 & Polylab OS & 德国HAAKE公司	\\
-				热重分析仪 & TGA Q50 & 美国TA公司	\\
+				HAAKE 转矩流变仪 & Polylab OS & 德国\textit{HAAKE}公司	\\
+				热重分析仪 & TGA Q50 & 美国\textit{TA}公司	\\
 				数字测厚仪 & GH-01 & 广州标际包装设备有限公司	\\
 				扫描电子显微镜 & S-4700 & 日本日立公司	\\
 				塑料摆锤冲击试验机 & ZBC & 美特斯工业系统（中国）有限公司	\\
 				维卡软化点试验机 & ZWK & 美特斯工业系统（中国）有限公司	\\
-				动态力学分析仪 & DMA Q800 & 美国TA公司	\\
+				动态力学分析仪 & DMA Q800 & 美国\textit{TA}公司	\\
 				\borderLine
 		\end{tabular}
+		}
 	\end{center}
 \end{table}
 
 \section{实验流程}
+
+我们依据图 \ref{flowChart} 所示的流程进行实验。首先针对不同的润滑剂和热稳定剂进行配方设计，依据配方进行试样的制备。再将制得的样品裁减成标准试样后进行性能测试，最后对测试得到的数据进行分析并得出结论。
 
 \begin{figure}[!htb]
     \begin{center}
@@ -90,28 +99,44 @@
 			\node(pre)[pro, right of = p1]{配方设计};
 			\node(sample)[pro, below of = pre]{制样};
 			\node(exp)[pro, below of = sample]{性能测试};
-			\node(bend)[pro, right of = exp]{弯曲强度};
-			\node(tensile)[pro, ]
-			
+			\node(p2)[coordinate, right of = exp, xshift = 1cm]{};
+			\node(bend)[pro, right of = p2]{弯曲强度};
+			\node(tensile)[pro, above of = bend, node distance = 1.5cm]{拉伸强度};
+			\node(dynamic)[pro, above of = tensile, node distance = 1.5cm]{动态热稳定性};
+			\node(static)[pro, above of = dynamic, node distance = 1.5cm]{静态热稳定性};
+			\node(impact)[pro, below of = bend, node distance = 1.5cm]{冲击强度};
+			\node(DMA)[pro, below of = impact, node distance = 1.5cm]{动态力学热分析};
+			\node(vic)[pro, below of = DMA, node distance = 1.5cm]{维卡软化点};
+			\node(result)[io, below of = exp]{实验数据分析与结论};
 			
 			% arrows
 			\draw[arrow](smooth.east) -| (p1) -- (pre);
 			\draw[arrow](stablizer.east) -| (p1) -- (pre);
 			\draw[arrow](pre.south) -- (sample);
 			\draw[arrow](sample.south) -- (exp);
+			\draw[line](exp.east) -- (p2);
+			\draw[arrow](p2) |- (tensile);
+			\draw[arrow](p2) |- (dynamic);
+			\draw[arrow](p2) |- (static);
+			\draw[arrow](p2) |- (impact);
+			\draw[arrow](p2) |- (DMA);
+			\draw[arrow](p2) |- (vic);
+			\draw[arrow](p2) -- (bend);
+			\draw[arrow](exp.south) -- (result);
 		\end{tikzpicture}
     \end{center}
     \caption{研究方案流程图}
+	\label{flowChart}
 \end{figure}
 
 \subsection{配方设计}
-CPVC 润滑体系与热稳定体系采用控制变量法进行配方设计，配方的基本组成如表 \ref{tabCPVCFormula} 所示
+CPVC 润滑体系与热稳定体系采用控制变量法进行配方设计，配方的基本组成如表 \ref{tabCPVCFormula} 所示。
 
 \begin{table}[!htb]
     \caption{CPVC 基本配方设计表}
     \label{tabCPVCFormula}
     \begin{center}
-    \footnotesize{
+    \small{
         \begin{tabular}{ccccccc}
             \borderLine
             CPVC & 抗冲击改性剂 & 热稳定剂 & 外润滑剂 & 内润滑剂 & 加工助剂 & 钛白粉 \\
@@ -142,14 +167,11 @@ CPVC 润滑体系与热稳定体系采用控制变量法进行配方设计，配
 
 
 \section{性能测试}
-CPVC 作为含氯聚合物，其热分解主要发生在加工与使用阶段。特别在加工过程中，CPVC 树脂长时间处于高温，或在较高温度下长期使用都会使 CPVC 发生热分解与热老化。加工状态又可分为静置压制或模中停留等静态受热与注塑、挤出、混炼、辊压等动态受热过程。因此 CPVC 的热稳定性测试分为静态热稳定测试与动态热稳定测试，同时用玻璃化转变温度和维卡热变形温度对 CPVC 的耐热性能进行表征。\par
-对于力学性能采用国家标准对 CPVC 的拉伸强度、弯曲强度、冲击强度进行测试，同时采用 SEM\footnote{扫描电子显微镜} 对冲击断面的形貌进行观测。
+CPVC 作为一种含氯聚合物，极易在受热时发生热分解。在加工过程中，由于 CPVC 长期处于受热状态，或在较高的使用温度下都会使得 CPVC 材料发生老化与热分解。同时，受热状态又可分为静态受热与动态受热，因此采用静态热稳定性测试和动态热稳定性测试分别对 CPVC 的热稳定性进行表征。同时用玻璃化转变温度和维卡热变形温度对 CPVC 在高温下的性能进行表征。对于力学性能根据国家标准对 CPVC 的拉伸强度、弯曲强度、冲击强度进行测试。
 
 \subsection{热老化试验箱法测试}
 CPVC 配混料在加工或再加工过程都会在较高温度的设备中停留一定时间，CPVC 制品在使用过程中也会经受一定的环境温度，这就要求热稳定剂能赋予 CPVC 以合适的静态热稳定性。根据 CPVC 热分解导致物料颜色变化或释放出氯化氢的特征，建立了变色法和脱氯化氢法两类评价静态热稳定性的方法。本实验采用变色法\footnote{执行标准 GB/T 9349—2002《聚氯乙烯、相关含氯均聚物和共聚物及其共混物热稳定性的测定 变色法》}进行 CPVC 静态热稳定性的表征。\par
 烘箱法：将边长 15 mm，厚度约 1 mm 的正方形试样，放在平铺于架子上的新的干净铝箔上面，在强制鼓风烘箱中于高温下加热不同时间。每隔一定时间取出一片试样，从测试开始至最初观察到颜色变化即为初期热稳定定性，从测试开始至试样完全变黑的时间则为长期热稳定性。
-
-\subsection{热失重分析测试}
 
 \subsection{动态热稳定性测试}\label{sectionHakee}
 动态热稳定性是指在热、空气和剪切力的共同作用下，热稳定剂抵抗 CPVC 热分解的能力。本实验采用转矩流变仪进行测试。首先将流变仪的温度设定为 205\cd，转速为 50 r/min。将 60 g 的样品加入到流变仪中，记录流变仪的转矩随时间的变化。在最终得到的 转矩-时间 曲线中，如图 \ref{figExHakee} 所示，笫一个峰为熔化峰，所对应的转矩为熔化转矩（fusion torgue）。熔化峰之后，由于物料进一步塑化并且熔体温度上升，使试样转矩下降，并随着熔体温度趋于恒定，转矩曲线呈现基本平稳段，所对应的转矩称为熔体转矩（melt torgue），也称平衡转矩。平衡转矩可用于评定样品的加工性能，平衡转矩越小，样品加工时所需的能耗越小，对设备的损耗也越小。随着试验的继续，CPVC 发生分解，此时曲线急速上升，混合物的长期热稳定性就是根据从熔化峰到转矩突然增大点所经历的时间来评定。
@@ -192,8 +214,8 @@ CPVC 配混料在加工或再加工过程都会在较高温度的设备中停留
 
 本实验采用落锤冲击强度仪进行缺口冲击强度测试\footnote{执行标准 ISO 180/1A}，缺口形状为“V”形，深度为 2 mm，落锤满载能量为 2.75 J。
 
-\subsection{扫描电镜测试}
-SEM 的最大特点是图像富有立体感，放大倍数连续可变，特别适合表面形态的研究，是研究固体材料表面三维结构形态的有效工具，成为常用的高分子表面形貌剖析手段。
+% \subsection{扫描电镜测试}
+% SEM 的最大特点是图像富有立体感，放大倍数连续可变，特别适合表面形态的研究，是研究固体材料表面三维结构形态的有效工具，成为常用的高分子表面形貌剖析手段。
 
 \subsection{动态力学热分析（DMA）}
 本实验中采用 DMA 对玻璃化转变温度进行测试。DMA 是对试样施加恒定振幅的正弦交变应力，使其发生受迫振动，观察应变随温度或时间的变化规律，从而计算力学参数用以表征材料粘弹性的一种试验方法。在聚合物玻璃化转变过程中，其粘弹性有很大变化，从而可用 DMA 测定 $T_g$。DMA 曲线通常有储能模量、损耗模量、损耗因子这三个信号，对应的 $T_g$ 也可有三种取法，分别为储能模量的台阶式下降曲线部分的起始点、损耗模量的峰值温度、损耗因子\footnote{损耗角正切：$tan \, \delta = \frac{G''}{G'}$}的峰值温度。本实验取损耗因子的峰值温度作为最终测试得到的玻璃化转变温度。如图 \ref{figExTg} 所示，在加热过程中，样品的损耗因子出现了一个峰值，取峰值所在温度为样品的玻璃化转变温度。

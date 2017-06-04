@@ -48,7 +48,7 @@
 \setmainfont{Times New Roman}
 \setsansfont{Arial}
 \setmonofont{Noto Mono}
-\setCJKmainfont[BoldFont=SimHei]{STSong}
+\setCJKmainfont[BoldFont=SimHei]{SimSun}
 
 %\newcommand{\song}{\CJKfamily{simsun}}  % 宋体
 \newcommand{\hei}{\CJKfamily{SimHei}}   % 黑体
@@ -105,6 +105,7 @@
 \CTEXsetup[beforeskip={0pt}]{chapter}	%章节前不留空白
 \captionsetup{font={small}}				%设置图表标题大小
 \setlength{\abovecaptionskip}{-0pt}		%图表标题与图标间距
+% \setlength{\bibsep}{5pt}				%参考文献间距
 
 
 %-------------------------------设置数学环境-----------------------------%
@@ -176,7 +177,10 @@ width0pt\right\delimright_{\rlap{$\scriptstyle#3$}}$};}}
 %-------------------------------文档部分---------------------------------%
 \begin{document}
 
-\pagestyle{empty}
+\pagestyle{fancy}
+\pagenumbering{Roman}
+\setcounter{page}{1}
+
 \maketitle
 
 \begin{abstract}\xiaosihao
@@ -187,6 +191,10 @@ width0pt\right\delimright_{\rlap{$\scriptstyle#3$}}$};}}
 \end{abstract}
 
 \renewcommand\abstractname{Abstract}
+\clearpage
+\begin{center}
+	\sanhao \textbf{Study on Thermal Stability and Lubrication System of Chlorinated}
+\end{center}
 \begin{abstract}\xiaosihao
 	Chlorinated polyvinyl chloride (CPVC) has poor thermal stability, high melt viscosity, and is prone to thermal decomposition of dehydrochlorination during processing. Therefore, it is necessary to add heat stabilizer and lubricant to CPVC. Lubricant is an indispensable kind of processing auxiliaries in CPVC process, but the addition of lubricant will have some influence on the mechanical properties of the material. Therefore, in the first part of this experiment, different types of external lubricants were studied, through the thermal properties and mechanical properties to find the same amount of lubrication under the best external lubricants.\par
 	For a long time, lead salt heat stabilizers have been preferred as heat stabilizers, but with the deepening of lead pollution, lead salt heat stabilizers are gradually being replaced by other types of heat stabilizers. Such as organic tin heat stabilizer because of its stable effect, the characteristics of small pollution, is gradually becoming the CPVC process of stabilizer choice. But because of the relatively high price of organic tin, so that its application development has been limited. Therefore, the second part of this experiment is to study the different types and types of organic tin heat stabilizer thermal and mechanical properties, in order to find the same amount can provide better thermal stability of organic tin varieties.\par
@@ -194,9 +202,6 @@ width0pt\right\delimright_{\rlap{$\scriptstyle#3$}}$};}}
 	\textbf{Keywords: chlorinated polyvinyl chloride; heat stabilizer; lubricant; organotin; polyethylene wax}
 \end{abstract}
 
-\pagestyle{fancy}
-\pagenumbering{Roman}
-\setcounter{page}{1}
 \tableofcontents
 
 \include{chapters/introduction}
