@@ -15,7 +15,7 @@
 %       ctexrep: ctex report
 %---------------------------------------------------------------%
     
-\documentclass[a4paper, twoside, onecolumn, notitlepage, 12pt]{ctexrep}    % transmag 实现双列排版，摘要跨列
+\documentclass[a4paper, oneside, onecolumn, notitlepage, 12pt]{ctexrep}    % transmag 实现双列排版，摘要跨列
 % titlepage 标题单独分页 notitlepage 标题不单独分页
 
 %----------------------------引入宏包---------------------------%
@@ -104,7 +104,7 @@
 \setlength{\parskip}{0pt}  %设置段间距
 \captionsetup{font={small}}				%设置图表标题大小
 \setlength{\abovecaptionskip}{-0pt}		%图表标题与图表间距
-% \setlength{\bibsep}{5pt}				%参考文献间距
+\setlength{\bibsep}{5pt}				%参考文献间距
 \renewcommand\arraystretch{1.2}			%设置表格内部高度
 
 \CTEXsetup[beforeskip={0pt}]{chapter}	%章节前不留空白
@@ -186,7 +186,6 @@ width0pt\right\delimright_{\rlap{$\scriptstyle#3$}}$};}}
 
 \include{chapters/announce}
 
-\setcounter{page}{1}
 \maketitle
 
 \begin{abstract}\xiaosihao
@@ -213,11 +212,15 @@ width0pt\right\delimright_{\rlap{$\scriptstyle#3$}}$};}}
 \include{chapters/introduction}
 \include{chapters/experiment}
 \include{chapters/results}
+\include{chapters/conclusion}
 
 \clearpage
 \addcontentsline{toc}{chapter}{参考文献}
-\bibliographystyle{unsrtnat}    %unsrtnat: sort with cite order; plainnat: sort with author name and year
-\bibliography{biblio.bib}
+{
+\small
+	\bibliographystyle{unsrtnat}    %unsrtnat: sort with cite order; plainnat: sort with author name and year
+	\bibliography{biblio.bib}
+}
 
 \include{chapters/thanks}
 
